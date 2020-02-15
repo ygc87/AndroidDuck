@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+
+    <FrameLayout
+        android:id="@+id/video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.xhy.neihanduanzi.videoplayer.VideoPlayerView
+            android:id="@+id/videoplayer"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:visibility="visible"
+            app:controller_layout_id="@layout/simple_exo_playback_list_view"
+            app:hide_on_touch="false"
+            app:player_layout_id="@layout/simple_exo_view"
+            app:player_list="true"
+            app:resize_mode="fill"
+            app:show_timeout="5000"
+            app:surface_type="texture_view" />
+
+        <RelativeLayout
+            android:id="@+id/ll_video_title"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bg_translucent">
+
+            <View
+                android:id="@+id/indicator"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:background="@drawable/freepage_circle" />
+
+            <TextView
+                android:id="@+id/video_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/indicator"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/_10dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</FrameLayout>

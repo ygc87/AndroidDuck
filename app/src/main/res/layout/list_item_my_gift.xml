@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="119dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_my_gift"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:paddingTop="@dimen/_10dp"
+        android:src="@drawable/default_image" />
+
+    <TextView
+        android:id="@+id/tv_my_gift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10.0dip"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:text="111"
+        android:textColor="@color/theme_font_color"
+        android:textSize="@dimen/txt_size_gift_name"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/bg_gift_surplus"
+        android:textSize="@dimen/txt_size_gift_detail" />
+    
+</LinearLayout>

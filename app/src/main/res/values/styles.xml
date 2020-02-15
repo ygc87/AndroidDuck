@@ -1,0 +1,102 @@
+<resources>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
+        <!--no actionbar and title-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--action bar color-->
+        <item name="colorPrimary">@color/primary</item>
+        <!--status bar color-->
+        <!--<item name="colorPrimaryDark">@color/primary_dark</item>-->
+        <!--window background-->
+        <item name="android:windowBackground">@color/comment_bg</item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- Customize your theme here. -->
+        <!--<item name="actionBarStyle">@style/JDActionBarStyle</item>-->
+        <!--<item name="drawerArrowStyle">@style/AppTheme.JDDrawerArrowStyle</item>-->
+        <!--actionbar text color-->
+        <item name="android:textColorPrimary">@color/primary_text</item>
+    </style>
+
+    <!--图片详情页 -->
+
+    <!--视频详情页 -->
+
+    <!-- 加载滚动条样式 -->
+
+    <!-- 操作项样式end -->
+
+
+    <!-- 分享对话框样式 start -->
+
+    <!-- 分享对话框样式 end -->
+
+
+    <!-- quick option style start -->
+
+    <!-- quick option style end -->
+
+    <!-- new user information style-->
+
+    <!-- events title -->
+
+    <!--Created by fei on 2016/5/19.-->
+
+    <style name="Theme.Dialog.NoTitle.Translucent" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowFrame">@null</item><!-- 边框 -->
+        <item name="android:windowIsFloating">true</item><!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item><!-- 半透明 -->
+        <item name="windowNoTitle">true</item><!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item><!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item><!-- 模糊 -->
+        <item name="windowActionBar">false</item>
+    </style>
+
+
+    <style name="SwipeBackLayout">
+        <item name="edge_size">50dip</item>
+        <item name="shadow_left">@drawable/shadow_left</item>
+        <item name="shadow_right">@drawable/shadow_right</item>
+        <item name="shadow_bottom">@drawable/shadow_bottom</item>
+    </style>
+
+    <!-- 忘记密码页 -->
+    <style name="ThemeEditText">
+        <item name="android:textCursorDrawable">@drawable/theme_hint_cursor</item>
+    </style>
+
+    <!-- 个人信息 -->
+    <style name="customProgressBar" parent="@android:style/Widget.ProgressBar.Small">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">21.0dip</item>
+        <item name="android:layout_height">21.0dip</item>
+        <item name="android:indeterminateDrawable">@drawable/custom_progress_bar</item>
+    </style>
+
+
+    <!--输入框所在dialog去掉白边-->
+    <style name="EdittextAlertDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+    <declare-styleable name="ShapeImageViewStyle">
+        <attr name="riv_border_color" format="color" />
+        <attr name="riv_border_width" format="dimension" />
+        <attr name="riv_corner_radius" format="dimension" />
+        <attr name="riv_is_circle" format="boolean" />
+        <attr name="riv_pressed_border_color" format="color" />
+        <attr name="riv_pressed_border_width" format="dimension" />
+        <attr name="riv_pressed_mask_color" format="color" />
+        <attr name="riv_pressed_mode_enabled" format="boolean" />
+    </declare-styleable>
+
+</resources>

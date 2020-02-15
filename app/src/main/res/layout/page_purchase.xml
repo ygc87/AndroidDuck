@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@id/rl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="52dp"
+        android:background="@color/white"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@id/tv_title_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="5.0dip"
+            android:text="致谢"
+            android:textColor="#FFEB6700"
+            android:textSize="@dimen/txt_size_20"
+            android:visibility="visible" />
+
+        <View
+            android:id="@+id/title_divider"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignParentBottom="true"
+            android:background="#FFEB6700"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/purchase_page_logo" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39.0dip"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="需要购买后观看"
+        android:textColor="#EB6700"
+        android:textSize="15.0sp" />
+
+    <TextView
+        android:id="@+id/object_charge"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="未知"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/account_balance"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7.0dip"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="未知"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/purchased_view_login_or_buy"
+        android:layout_width="207.0dip"
+        android:layout_height="36.0dip"
+        android:layout_marginTop="25.0dip"
+        android:background="@drawable/general_shared_rounded_button_orange"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="购买"
+        android:textColor="@color/white"
+        android:textSize="15.5sp" />
+</LinearLayout>

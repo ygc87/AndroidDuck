@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_ios"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@id/rl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/activity_title_bg"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@id/tv_title_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="5.0dip"
+            android:text="@string/tv_myrecode"
+            android:textColor="@color/title_background"
+            android:textSize="@dimen/txt_size_title"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/iv_title_left"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:paddingLeft="@dimen/dimen_size_15"
+            android:paddingRight="@dimen/dimen_size_15"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_return_nor" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_my_score_backcolor"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_score_rule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="@drawable/score_text_selector"
+                android:padding="10.0dip"
+                android:text="积分规则"
+                android:textColor="@color/theme_font_color"
+                android:textSize="@dimen/txt_size_gift_activity_my_detail" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="25.0dip">
+
+                <TextView
+                    android:id="@+id/tv_my_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="0"
+                    android:textColor="@color/theme_font_color"
+                    android:textSize="@dimen/txt_size_gift_activity_my_score" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/tv_my_score"
+                    android:layout_marginLeft="8.0dip"
+                    android:layout_toRightOf="@id/tv_my_score"
+                    android:text="积分"
+                    android:textColor="@color/theme_font_color"
+                    android:textSize="@dimen/txt_size_gift_activity_my_detail" />
+
+                <TextView
+                    android:id="@+id/tv_chongzhi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="22dp"
+                    android:layout_toLeftOf="@+id/divider"
+                    android:background="@drawable/score_text_selector"
+                    android:text="充值"
+                    android:textColor="@color/theme_font_color"
+                    android:textSize="20sp" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="1dp"
+                    android:layout_height="27dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="22dp"
+                    android:layout_toLeftOf="@+id/tv_exchange_now"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_exchange_now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="22.0dip"
+                    android:background="@drawable/score_text_selector"
+                    android:text="开通VIP"
+                    android:textColor="@color/theme_font_color"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@drawable/titlebar_shadow" />
+
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/pull_refresh_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_ios"
+        android:fadingEdge="none"
+        android:horizontalSpacing="1.0dip"
+        android:listSelector="@drawable/list_item_selector"
+        android:numColumns="3"
+        android:smoothScrollbar="true"
+        android:verticalSpacing="1.0dip" />
+
+</LinearLayout>

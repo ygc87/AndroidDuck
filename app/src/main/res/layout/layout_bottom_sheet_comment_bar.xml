@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:windowSoftInputMode="adjustPan|adjustResize">
+
+    <com.xhy.neihanduanzi.widget.RichEditText
+        android:id="@+id/et_comment"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="@dimen/lay_12"
+        android:layout_marginLeft="@dimen/lay_16"
+        android:layout_marginRight="@dimen/lay_16"
+        android:layout_marginTop="@dimen/lay_12"
+        android:maxLength="200"
+        android:background="@drawable/bg_comment"
+        android:textCursorDrawable="@drawable/edit_cursor"
+        android:elevation="0dp"
+        android:focusable="true"
+        android:gravity="top"
+        android:hint="@string/comment_hint"
+        android:outlineProvider="none"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey_300"
+        android:textSize="@dimen/font_16"
+        tools:targetApi="lollipop" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="6dp"
+        android:paddingLeft="@dimen/lay_16"
+        android:paddingRight="@dimen/lay_16">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_comment"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:background="@drawable/selector_comment"
+            android:elevation="0dp"
+            android:outlineProvider="none"
+            android:text="@string/send_hint"
+            android:textColor="@color/btn_send_color"
+            tools:targetApi="lollipop" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_ios"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"></include>
+
+    <com.xhy.neihanduanzi.view.TipView
+        android:id="@+id/tip_view"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:visibility="gone"
+        app:tipText="net_unavailable"
+        app:tipTextSize="14sp"></com.xhy.neihanduanzi.view.TipView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/line_0.5"
+        android:background="@color/weibo_app_bar_text" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_0.5"
+                android:layout_marginTop="@dimen/dimen_size_10"
+                android:background="@color/weibo_app_bar_text" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/dimen_size_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/input_new_password"
+                    android:textColor="@color/bar"
+                    android:textSize="@dimen/text_size_15" />
+
+                <EditText
+                    android:id="@+id/ed_newpwd"
+                    style="@style/ThemeEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_size_10"
+                    android:layout_marginRight="@dimen/dimen_size_5"
+                    android:layout_weight="1.0"
+                    android:background="@color/white"
+                    android:ems="10"
+                    android:gravity="left"
+                    android:hint="@string/hint_pwd"
+                    android:inputType="textPassword"
+                    android:textColor="@color/bar"
+                    android:textColorHint="@color/edit_hint"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_0.5"
+                android:layout_marginLeft="@dimen/dimen_size_10"
+                android:layout_marginRight="@dimen/dimen_size_10"
+                android:background="@color/bg_listview_divider" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/dimen_size_10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/confirm_new_password"
+                    android:textColor="@color/bar"
+                    android:textSize="@dimen/text_size_15" />
+
+                <EditText
+                    android:id="@+id/ed_newpwd_comfirm"
+                    style="@style/ThemeEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_size_10"
+                    android:layout_marginRight="@dimen/dimen_size_5"
+                    android:layout_weight="1.0"
+                    android:background="@color/white"
+                    android:ems="10"
+                    android:gravity="left"
+                    android:hint="@string/hint_pwd"
+                    android:inputType="textPassword"
+                    android:textColor="@color/bar"
+                    android:textColorHint="@color/edit_hint"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_0.5"
+                android:background="@color/weibo_app_bar_text" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@drawable/titlebar_shadow" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/bt_next_step"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/dimen_size_10"
+        android:background="@drawable/bt_round_themcolor_selector"
+        android:text="@string/reset_pwd_done"
+        android:textColor="@color/button_text_color"
+        android:textSize="@dimen/text_size_16" />
+
+</LinearLayout>
+
+

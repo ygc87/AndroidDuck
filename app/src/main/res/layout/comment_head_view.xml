@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/video_detail_bg"
+    android:gravity="center"
+    android:minHeight="46dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:clickable="true"
+        android:descendantFocusability="blocksDescendants"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal">
+
+            <com.xhy.neihanduanzi.widget.PortraitView
+                android:id="@+id/iv_portrait"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:src="@drawable/user_pic" />
+
+            <TextView
+                android:id="@+id/tv_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="18dp"
+                android:layout_toRightOf="@+id/iv_portrait"
+                android:text="李大神"
+                android:textColor="@color/secondary_text_default_material_light"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_portrait"
+                android:layout_marginTop="@dimen/_10dp"
+                android:lineSpacingMultiplier="1.2"
+                android:text="Content"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <!-- 点赞 评论 -->
+        <RelativeLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginLeft="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_digg"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="8dp"
+                android:clickable="true"
+                android:drawableLeft="@drawable/icon_like_nor"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical"
+                android:text="赞数"
+                android:textColor="#999999" />
+
+            <TextView
+                android:id="@+id/tv_collect"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="24dp"
+                android:layout_toRightOf="@+id/tv_digg"
+                android:clickable="true"
+                android:drawableLeft="@drawable/icon_favorite_gray_nor"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical"
+                android:text="收藏数"
+                android:textColor="#999999" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#E5E5E5" />
+
+        <com.xhy.neihanduanzi.view.ResizableImageView
+            android:id="@+id/comment_ad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+    </LinearLayout>
+</LinearLayout>

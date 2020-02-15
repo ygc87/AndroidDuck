@@ -1,0 +1,202 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_ios"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"></include>
+
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_size_10"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_0.5"
+                android:background="@color/weibo_app_bar_text" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_size_10">
+
+                <!-- 账号 -->
+                <EditText
+                    android:id="@+id/ed_zhanghao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_size_5"
+                    android:layout_weight="1.0"
+                    android:background="@color/white"
+                    android:ems="10"
+                    android:gravity="left"
+                    android:hint="@string/input_text_zhanghao"
+                    android:imeOptions="actionNext"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textColor="@color/bar"
+                    android:textColorHint="@color/edit_hint"
+                    android:textCursorDrawable="@drawable/ed_cursor"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_0.3"
+                android:layout_marginLeft="@dimen/dimen_size_10"
+                android:layout_marginRight="@dimen/dimen_size_10"
+                android:background="@color/bg_listview_divider" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_size_10">
+
+                <!-- 用户昵称 -->
+                <EditText
+                    android:id="@+id/ed_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_size_5"
+                    android:layout_weight="1.0"
+                    android:background="@color/white"
+                    android:ems="10"
+                    android:gravity="left"
+                    android:hint="@string/input_text_nick"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textColor="@color/bar"
+                    android:textColorHint="@color/edit_hint"
+                    android:textCursorDrawable="@drawable/ed_cursor"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_0.3"
+                android:layout_marginLeft="@dimen/dimen_size_10"
+                android:layout_marginRight="@dimen/dimen_size_10"
+                android:background="@color/bg_listview_divider" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_size_10">
+
+                <!-- 设置密码 -->
+                <EditText
+                    android:id="@+id/ed_pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_size_5"
+                    android:layout_weight="1.0"
+                    android:background="@color/white"
+                    android:ems="10"
+                    android:gravity="left"
+                    android:hint="@string/input_pwd"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLength="15"
+                    android:singleLine="true"
+                    android:textColor="@color/bar"
+                    android:textColorHint="@color/edit_hint"
+                    android:textCursorDrawable="@drawable/ed_cursor"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_0.3"
+                android:layout_marginLeft="@dimen/dimen_size_10"
+                android:layout_marginRight="@dimen/dimen_size_10"
+                android:background="@color/bg_listview_divider" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_size_10">
+
+                <!-- 输入邀请人ID -->
+                <EditText
+                    android:id="@+id/ed_invite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_size_5"
+                    android:layout_weight="1.0"
+                    android:background="@color/white"
+                    android:ems="10"
+                    android:gravity="left"
+                    android:hint="@string/input_invite_code"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="@color/bar"
+                    android:textColorHint="@color/edit_hint"
+                    android:textCursorDrawable="@drawable/ed_cursor"
+                    android:textSize="@dimen/text_size_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_0.3"
+                android:layout_marginLeft="@dimen/dimen_size_10"
+                android:layout_marginRight="@dimen/dimen_size_10"
+                android:background="@color/bg_listview_divider" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_0.5"
+                android:background="@color/weibo_app_bar_text" />
+        </LinearLayout>
+
+        <com.xhy.neihanduanzi.view.TipView
+            android:id="@+id/tip_view"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            app:tipText="net_unavailable"
+            app:tipTextSize="14sp"></com.xhy.neihanduanzi.view.TipView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@drawable/titlebar_shadow" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/bt_register"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/large_btn_height"
+        android:layout_marginLeft="@dimen/dimen_size_10"
+        android:layout_marginRight="@dimen/dimen_size_10"
+        android:layout_marginTop="@dimen/dimen_size_20"
+        android:background="@drawable/bt_round_themcolor_selector"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_16" />
+
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/title_leftandright_size"
+        android:textColor="@color/theme_font_color"
+        android:layout_marginTop="@dimen/dimen_size_20"
+        android:layout_marginLeft="@dimen/dimen_size_10"
+        android:text="已有账号请登录"/>
+
+</LinearLayout>

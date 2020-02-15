@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img_error_layout"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_sorry"
+        android:layout_width="91dp"
+        android:layout_height="28dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="19dp"
+        android:gravity="center"
+        android:text="SORRY"
+        android:textColor="#FFED6400"
+        android:textSize="@dimen/font_20"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_error_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5.0dip"
+        android:gravity="center"
+        android:text="您还没有登录"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_14"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_sorry_action"
+        android:layout_width="60dp"
+        android:layout_height="21dp"
+        android:layout_gravity="center_horizontal"
+        android:text="点击登录"
+        android:textColor="#FFED6400"
+        android:textSize="@dimen/font_15"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_empty_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/empty_content"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/dimen_size_14"
+        android:visibility="gone" />
+
+</LinearLayout>

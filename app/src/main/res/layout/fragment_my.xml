@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg_ios"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.30000007dip"
+                            android:background="@color/bg_listview_divider" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_userinfo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6.0dip"
+                            android:gravity="center_vertical">
+
+                            <com.xhy.neihanduanzi.widget.PortraitView
+                                android:id="@+id/img_user_header"
+                                android:layout_width="@dimen/head_home_mine"
+                                android:layout_height="@dimen/head_home_mine"
+                                android:layout_gravity="center"
+                                android:layout_margin="10.0dip"
+                                android:src="@drawable/default_user" />
+
+                            <TextView
+                                android:id="@+id/tv_my_username"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15.0dip"
+                                android:layout_marginTop="10.0dip"
+                                android:layout_toRightOf="@+id/img_user_header"
+                                android:text=""
+                                android:textColor="@color/main_fant_color"
+                                android:textSize="@dimen/dimen_size_20" />
+
+                            <TextView
+                                android:id="@+id/tv_my_uid"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_my_username"
+                                android:layout_marginLeft="15.0dip"
+                                android:layout_marginTop="3.0dip"
+                                android:layout_toRightOf="@+id/img_user_header"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@color/bar"
+                                android:textSize="@dimen/dimen_size_14" />
+
+                            <TextView
+                                android:id="@+id/tv_erweima"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@+id/img_user_header"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="24dp"
+                                android:drawablePadding="9.0dp"
+                                android:drawableTop="@drawable/icon_qr_code"
+                                android:singleLine="true"
+                                android:text="推荐有奖"
+                                android:textColor="@color/bar"
+                                android:textSize="@dimen/dimen_size_10" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.30000007dip"
+                            android:layout_marginLeft="10.0dip"
+                            android:background="@color/bg_listview_divider" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5.0dip"
+                            android:layout_marginTop="4.0dip"
+                            android:gravity="center_horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/user_pay_layout"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_count_comments"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textColor="@color/orange_normal_background"
+                                    android:textSize="@dimen/dimen_size_16"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/tv_my_comment"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="已购"
+                                    android:textColor="@color/title_graybg"
+                                    android:textSize="13.0sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="0.30000007dip"
+                                android:layout_height="fill_parent"
+                                android:layout_marginBottom="6.0dip"
+                                android:layout_marginTop="6.0dip"
+                                android:background="@color/bg_listview_divider" />
+
+                            <LinearLayout
+                                android:id="@+id/user_score_layout"
+                                android:layout_width="0.0dip"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_count_score"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textColor="@color/orange_normal_background"
+                                    android:textSize="@dimen/dimen_size_16"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/tv_my_score"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="@string/score"
+                                    android:textColor="@color/title_graybg"
+                                    android:textSize="13.0sp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="0.30000007dip"
+                                android:layout_height="fill_parent"
+                                android:layout_marginBottom="6.0dip"
+                                android:layout_marginTop="6.0dip"
+                                android:background="@color/bg_listview_divider" />
+
+                            <LinearLayout
+                                android:id="@+id/user_collect_layout"
+                                android:layout_width="0.0dip"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_count_collected"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="1.0dip"
+                                    android:paddingRight="1.0dip"
+                                    android:text="0"
+                                    android:textColor="@color/orange_normal_background"
+                                    android:textSize="@dimen/dimen_size_16"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/tv_my_collect"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="收藏"
+                                    android:textColor="@color/title_graybg"
+                                    android:textSize="13.0sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.30000007dip"
+                        android:background="@color/weibo_app_bar_text" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.30000007dip"
+                    android:layout_marginTop="10.0dip"
+                    android:background="@color/weibo_app_bar_text" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <!-- 我的收藏 -->
+                        <LinearLayout
+                            android:id="@+id/ll_mycollection"
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dip"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="16.0dip"
+                                android:layout_height="16.0dip"
+                                android:layout_marginLeft="10.0dip"
+                                android:src="@drawable/user_icon_favorite_nor" />
+
+                            <TextView
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5.0dip"
+                                android:layout_weight="1.0"
+                                android:text="@string/tv_mycollection"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/dimen_size_14" />
+
+                            <ImageView
+                                android:layout_width="25.0dip"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/arrow" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.30000007dip"
+                            android:layout_marginLeft="10.0dip"
+                            android:background="@color/bg_listview_divider" />
+
+                        <!-- 我的购买 -->
+                        <LinearLayout
+                            android:id="@+id/ll_mybuy"
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dip"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="16.0dip"
+                                android:layout_height="16.0dip"
+                                android:layout_marginLeft="10.0dip"
+                                android:src="@drawable/user_icon_car_nor" />
+
+                            <TextView
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5.0dip"
+                                android:layout_weight="1.0"
+                                android:text="@string/tv_mybuy"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/dimen_size_14" />
+
+                            <ImageView
+                                android:layout_width="25.0dip"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/arrow" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.30000007dip"
+                            android:layout_marginLeft="10.0dip"
+                            android:background="@color/bg_listview_divider" />
+
+                        <!-- 我的积分 -->
+                        <LinearLayout
+                            android:id="@+id/ll_myscore"
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dip"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="16.0dip"
+                                android:layout_height="16.0dip"
+                                android:layout_marginLeft="10.0dip"
+                                android:src="@drawable/user_icon_point_nor" />
+
+                            <TextView
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5.0dip"
+                                android:layout_weight="1.0"
+                                android:text="@string/tv_myrecode"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/dimen_size_14" />
+
+                            <ImageView
+                                android:layout_width="25.0dip"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/arrow" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.30000007dip"
+                            android:layout_marginLeft="10.0dip"
+                            android:background="@color/bg_listview_divider" />
+
+                        <!-- 我要成为VIP -->
+                        <LinearLayout
+                            android:id="@+id/ll_store"
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dip"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="16.0dip"
+                                android:layout_height="16.0dip"
+                                android:layout_marginLeft="10.0dip"
+                                android:src="@drawable/user_icon_vip_nor" />
+
+                            <TextView
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5.0dip"
+                                android:layout_weight="1.0"
+                                android:text="@string/tv_vip"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/dimen_size_14" />
+
+                            <ImageView
+                                android:layout_width="25.0dip"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/arrow" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.30000007dip"
+                            android:background="@color/weibo_app_bar_text" />
+
+                        <!-- 充值通道 -->
+                        <LinearLayout
+                            android:id="@+id/ll_chongzhi"
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dip"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="16.0dip"
+                                android:layout_height="16.0dip"
+                                android:layout_marginLeft="10.0dip"
+                                android:src="@drawable/user_icon_chongzhi_nor" />
+
+                            <TextView
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5.0dip"
+                                android:layout_weight="1.0"
+                                android:text="@string/tv_chongzhi"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/dimen_size_14" />
+
+                            <ImageView
+                                android:layout_width="25.0dip"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/arrow" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.30000007dip"
+                            android:background="@color/weibo_app_bar_text" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.30000007dip"
+                    android:layout_marginTop="10.0dip"
+                    android:background="@color/weibo_app_bar_text" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dip"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <!-- 绑定手机 -->
+                    <LinearLayout
+                        android:id="@+id/ll_my_verify"
+                        style="@style/customProgressBar"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dip"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/dimen_size_16"
+                            android:layout_height="@dimen/dimen_size_16"
+                            android:layout_marginLeft="@dimen/dimen_size_10"
+                            android:src="@drawable/user_icon_mobile_nor" />
+
+                        <TextView
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.0dip"
+                            android:layout_weight="1.0"
+                            android:text="@string/tv_bind_phone"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_size_14" />
+
+                        <TextView
+                            android:id="@+id/tv_bindphone_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/verify_normal"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <ImageView
+                            android:layout_width="25.0dip"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/arrow" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/line_0.3"
+                        android:layout_marginLeft="@dimen/dimen_size_10"
+                        android:background="@color/bg_listview_divider" />
+
+                    <!-- 修改密码 -->
+                    <LinearLayout
+                        android:id="@+id/ll_modify_password"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dip"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="16.0dip"
+                            android:layout_height="16.0dip"
+                            android:layout_marginLeft="10.0dip"
+                            android:src="@drawable/user_icon_pw_nor" />
+
+                        <TextView
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5.0dip"
+                            android:layout_weight="1.0"
+                            android:text="修改密码"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_size_14" />
+
+                        <ImageView
+                            android:layout_width="25.0dip"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/arrow" />
+                    </LinearLayout>
+                    <!-- 清除缓存 -->
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.30000007dip"
+                            android:layout_marginLeft="10.0dip"
+                            android:background="@color/bg_listview_divider" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_clean_cache"
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dip"
+                            android:gravity="center_vertical">
+
+                            <ImageView
+                                android:layout_width="16.0dip"
+                                android:layout_height="16.0dip"
+                                android:layout_marginLeft="10.0dip"
+                                android:src="@drawable/user_icon_clear_nor" />
+
+                            <TextView
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5.0dip"
+                                android:layout_weight="1.0"
+                                android:text="清除缓存"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/dimen_size_14" />
+
+                            <TextView
+                                android:id="@+id/tv_cache_clear"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="立即清除"
+                                android:layout_marginRight="25dp"
+                                android:textColor="@color/verify_normal"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <!-- 意见反馈 -->
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.30000007dip"
+                                android:layout_marginLeft="10.0dip"
+                                android:background="@color/bg_listview_divider" />
+
+
+                            <LinearLayout
+                                android:id="@+id/ll_feedback"
+                                android:layout_width="fill_parent"
+                                android:layout_height="50dip"
+                                android:gravity="center_vertical">
+
+                                <ImageView
+                                    android:layout_width="16.0dip"
+                                    android:layout_height="16.0dip"
+                                    android:layout_marginLeft="10.0dip"
+                                    android:src="@drawable/user_icon_report_nor" />
+
+                                <TextView
+                                    android:layout_width="0.0dip"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5.0dip"
+                                    android:layout_weight="1.0"
+                                    android:text="意见反馈"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/dimen_size_14" />
+
+                                <ImageView
+                                    android:layout_width="25.0dip"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/arrow" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.30000007dip"
+                            android:background="@color/weibo_app_bar_text" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.30000007dip"
+                    android:layout_marginBottom="4.0dip"
+                    android:background="@color/bg_listview_divider" />
+
+                <Button
+                    android:id="@+id/btn_exit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_size_10"
+                    android:background="@drawable/bt_round_themcolor_selector"
+                    android:gravity="center"
+                    android:minHeight="@dimen/button_height"
+                    android:padding="@dimen/dimen_size_10"
+                    android:text="退出登录"
+                    android:textColor="@color/button_text_color"
+                    android:textSize="@dimen/text_size_16"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/bg_ios" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_refresh"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/refresh_bg"
+        android:src="@drawable/refresh"
+        android:visibility="gone" />
+
+</FrameLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_ios"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"></include>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/line_0.5"
+        android:background="@color/weibo_app_bar_text" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_size_10"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_0.5"
+                android:background="@color/weibo_app_bar_text" />
+
+            <LinearLayout
+
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_size_10"
+                android:layout_marginBottom="@dimen/dimen_size_10"
+                android:layout_marginRight="@dimen/dimen_size_10"
+                android:layout_marginTop="@dimen/dimen_size_10"
+                android:paddingBottom="@dimen/dimen_size_2"
+                android:paddingTop="@dimen/dimen_size_2">
+
+                <EditText
+                    android:id="@+id/ed_phone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_size_10"
+                    android:layout_marginRight="@dimen/dimen_size_10"
+                    android:background="@color/white"
+                    android:ems="10"
+                    android:gravity="left"
+                    android:hint="@string/telephone"
+                    android:inputType="phone"
+                    android:textColor="@color/bar"
+                    android:textColorHint="#44202020"
+                    android:textCursorDrawable="@drawable/edit_cursor"
+                    android:textSize="16.0sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_0.5"
+                android:layout_marginLeft="@dimen/dimen_size_10"
+                android:layout_marginRight="@dimen/dimen_size_10"
+                android:background="@color/weibo_app_bar_text" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dip"
+                android:layout_marginBottom="10.0dip"
+                android:layout_marginTop="10.0dip">
+
+                <EditText
+                    android:id="@+id/ed_verifyCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@color/white"
+                    android:ems="10"
+                    android:gravity="left"
+                    android:hint="输入验证码"
+                    android:inputType="numberSigned"
+                    android:textColor="@color/bar"
+                    android:textColorHint="#44202020"
+                    android:textCursorDrawable="@drawable/edit_cursor"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/tv_getVerify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bt_round_themcolor_selector"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dimen_size_6"
+                    android:paddingLeft="@dimen/dimen_size_10"
+                    android:paddingRight="@dimen/dimen_size_10"
+                    android:paddingTop="@dimen/dimen_size_6"
+                    android:text="@string/register_get_verifycode"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_14" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/line_0.5"
+                android:background="@color/weibo_app_bar_text" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@drawable/titlebar_shadow" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/bt_next_step"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/dimen_size_10"
+        android:background="@drawable/bt_round_themcolor_selector"
+        android:text="@string/record_camera_next"
+        android:textColor="@color/button_text_color"
+        android:textSize="@dimen/text_size_16" />
+</LinearLayout>
+

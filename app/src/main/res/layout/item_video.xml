@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:background="#ffffff"
+    app:cardCornerRadius="2dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:id="@+id/item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/iv_user_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/widget_default_face" />
+
+            <TextView
+                android:id="@+id/tv_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/iv_user_icon"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="18.5dp"
+                android:layout_toRightOf="@id/iv_user_icon"
+                android:singleLine="true"
+                android:text="作者" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_user_icon"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/video_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.xhy.neihanduanzi.videoplayer.VideoPlayerView
+                android:id="@+id/videoplayer"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:visibility="visible"
+                app:controller_layout_id="@layout/simple_exo_playback_list_view"
+                app:hide_on_touch="false"
+                app:player_layout_id="@layout/simple_exo_view"
+                app:player_list="true"
+                app:resize_mode="fill"
+                app:show_timeout="5000"
+                app:surface_type="texture_view" />
+
+            <ImageView
+                android:id="@+id/iv_payed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:background="@drawable/payed_flag"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp">
+
+            <TextView
+                android:id="@+id/tv_digg"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="8dp"
+                android:drawableLeft="@drawable/icon_like_nor"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical"
+                android:text="赞数"
+                android:textColor="#999999"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_collected"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@+id/tv_digg"
+                android:drawableLeft="@drawable/icon_favorite_gray_nor"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical"
+                android:text="收藏数"
+                android:textColor="#999999"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_comment_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@+id/tv_collected"
+                android:drawableLeft="@drawable/icon_commen_nor"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical|left"
+                android:text="评论"
+                android:textColor="#999999"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/im_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_20dp"
+                android:gravity="center_vertical|right"
+                android:src="@drawable/collect_delete_selector"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

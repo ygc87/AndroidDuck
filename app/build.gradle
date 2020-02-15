@@ -1,0 +1,185 @@
+apply plugin: 'com.android.application'
+
+android {
+    //去掉重复文件
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/notice'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+        incremental true
+    }
+
+    defaultConfig {
+        applicationId "com.example.chaokun.neihanduanzi"
+        minSdkVersion 17
+        targetSdkVersion 22
+        compileSdkVersion = 27
+        buildToolsVersion = '27.0.3'
+
+        versionCode 9
+        versionName "1.0.8"
+        multiDexEnabled true
+
+        renderscriptTargetApi 23
+        renderscriptSupportModeEnabled true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+
+        buildConfigField("String", "API_SERVER_URL", '"http://www.djk777.com:8089/;http://www.szchexia.com:8089/;' +
+                'http://www.lwamzx.com:8089/;http://www.lphmall.com:8089/;http://www.5184train.com:8089/' +
+                ';http://www.zjjxxql.com:8089/;http://www.dazhoush.com:8089/"')
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    //单元测试框架
+    testCompile 'junit:junit:4.12'
+    compile 'com.jiechic.library:xUtils:2.6.14'
+    compile('com.android.support:recyclerview-v7:26.1.0') {
+        exclude group: 'com.android.support'
+    }
+    compile('com.android.support:cardview-v7:26.+') {
+        exclude group: 'com.android.support'
+    }
+    compile('com.android.support:design:27.1.0') {
+        exclude group: 'com.android.support'
+    }
+    compile files('libs/universal-image-loader-1.9.3.jar')
+    compile 'com.victor:lib:1.0.1'
+    compile 'com.afollestad.material-dialogs:core:0.8.5.9'
+    compile files('libs/uk-co-senab-photoview-source.jar')
+    compile files('libs/xstream-1.4.7.jar')
+    compile 'com.zhy:changeskin:4.0.2'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+
+    //高斯模糊
+
+    //compile 'com.github.open-android:Glide-transformations:0.1.0'
+    implementation 'jp.wasabeef:glide-transformations:3.3.0'
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'com.jakewharton:butterknife:6.1.0'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'me.yokeyword:fragmentation:0.7.10'
+    compile 'org.simple:androideventbus:1.0.5.1'
+    compile 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
+    compile 'com.ogaclejapan.smarttablayout:utils-v4:1.6.1@aar'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'pub.devrel:easypermissions:0.1.9'
+    compile 'com.google.zxing:core:3.2.1'
+    compile 'com.davemorrissey.labs:subsampling-scale-image-view:3.6.0'
+    compile 'com.kaopiz:kprogresshud:1.0.1'
+
+    //RxJava dependencies
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.0'
+    compile 'io.reactivex.rxjava2:rxjava:2.0.2'
+    compile 'com.android.support:support-annotations:27.1.0'
+
+    //二维码
+    compile files('libs/httpclient-4.3.1.jar')
+    compile files('libs/httpclient-cache-4.3.1.jar')
+    compile files('libs/httpcore-4.3.jar')
+    compile files('libs/httpmime-4.3.1.jar')
+
+    //noinspection GradleCompatible
+    compile 'com.android.support:support-v4:26.1.0'
+    compile 'com.github.bumptech.glide:glide:4.3.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.3.1'
+    compile 'com.github.bumptech.glide:okhttp3-integration:4.3.1'
+    compile 'com.zhy:okhttputils:2.6.2'
+    compile 'com.squareup.okio:okio:1.5.0'
+
+    //数据库管理
+    compile 'org.litepal.android:core:1.6.1'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+
+    //百度移动统计
+    compile files('libs/Baidu_Mtj_3.8.1.1.jar')
+
+    //Umeng 统计
+    compile 'com.umeng.sdk:common:latest.integration'
+    compile 'com.umeng.sdk:analytics:latest.integration'
+
+    //动态导航栏
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+
+    //视频播放器
+    compile 'com.ycjiang:VideoPlayModule:2.1.74'
+    compile 'com.android.support:multidex:1.0.1'
+
+    //App版本更新
+
+    //compile 'com.qianwen:update-app:3.5.2'
+    compile 'com.allenliu.versionchecklib:library:2.0.5'
+
+    //测试卡顿框架
+    compile 'com.github.markzhai:blockcanary-android:1.5.0'
+
+    //内存泄漏检测
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+
+    //BannerBean 广告切换
+    compile 'com.youth.banner:banner:1.4.9'
+
+    //EventBus 事件总线
+    compile 'org.greenrobot:eventbus:3.1.1'
+
+    //Adapter 框架
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+
+    //空布局 view 显示
+    compile 'com.github.nukc.stateview:library:1.5.0'
+
+    //刷新布局
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-6'
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-6'
+
+    //空白页布局
+    compile 'com.github.nukc.stateview:library:1.5.0'
+
+    // animator providers
+    compile 'com.github.nukc.stateview:animations:1.0.1'
+
+    // gif drawable
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.+'
+
+    // rx android
+    compile 'io.reactivex:rxandroid:1.2.0'
+    compile 'com.orhanobut:logger:2.2.0'
+
+}
+
+
+

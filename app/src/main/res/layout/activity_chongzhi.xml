@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_ios"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"></include>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <com.xhy.neihanduanzi.view.ResizableImageView
+                    android:id="@+id/im_kefu"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@color/weibo_app_bar_text" />
+
+                <TextView
+                    android:id="@+id/tv_chongzhi_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10.0dip"
+                    android:paddingLeft="@dimen/padding"
+                    android:paddingRight="@dimen/padding"
+                    android:text="选择充值金额"
+                    android:textColor="@color/bg_gift_exchange_rule"
+                    android:textSize="@dimen/txt_size_gift_name"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@color/weibo_app_bar_text" />
+
+                <com.xhy.neihanduanzi.widget.ChargeListView
+                    android:id="@+id/charge_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:divider="@color/bg_listview_divider"
+                    android:dividerHeight="0.30000007dip"
+                    android:paddingLeft="@dimen/padding" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.30000007dip"
+                    android:background="@color/weibo_app_bar_text" />
+
+                <TextView
+                    android:id="@+id/tv_chongzhi_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10.0dip"
+                    android:text="选择充值方式"
+                    android:textColor="@color/bg_gift_exchange_rule"
+                    android:textSize="@dimen/txt_size_gift_name"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.30000007dip"
+                    android:background="@color/weibo_app_bar_text" />
+
+                <RelativeLayout
+                    android:id="@+id/pay_zfb"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="@dimen/padding"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5.0dip">
+
+                        <ImageView
+                            android:layout_width="@dimen/img_small_ist"
+                            android:layout_height="@dimen/img_small_ist"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_top_up_zfb" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10.0dip"
+                            android:text="支付宝支付"
+                            android:textColor="@color/bg_gift_exchange_rule"
+                            android:textSize="@dimen/txt_size_gift_name" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/zfb_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/selector_top_up_checkbox"
+                        android:checked="true"
+                        android:paddingRight="@dimen/padding" />
+                </RelativeLayout>
+
+                <!--<View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.30000007dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:background="@color/bg_listview_divider" />-->
+
+                <RelativeLayout
+                    android:id="@+id/pay_wx"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="@dimen/padding"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5.0dip">
+
+                        <ImageView
+                            android:layout_width="@dimen/img_small_ist"
+                            android:layout_height="@dimen/img_small_ist"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_top_up_wechat" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10.0dip"
+                            android:text="微信支付"
+                            android:textColor="@color/bg_gift_exchange_rule"
+                            android:textSize="@dimen/txt_size_gift_name" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/wx_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/selector_top_up_checkbox"
+                        android:paddingRight="@dimen/padding" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.30000007dip"
+                    android:background="@color/weibo_app_bar_text" />
+
+                <Button
+                    android:id="@+id/btn_top_up_now"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/padding"
+                    android:background="@drawable/bt_round_themcolor_selector"
+                    android:text="立即充值"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@drawable/titlebar_shadow" />
+    </FrameLayout>
+</LinearLayout>

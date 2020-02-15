@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"></include>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/line_0.3"
+        android:background="@color/title_bar_divider_line" />
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/smart_refresh_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <com.xhy.neihanduanzi.view.AutoLoadRecyclerView
+                android:id="@+id/pull_refresh_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/bg_ios"
+                android:fadingEdge="none"
+                android:horizontalSpacing="1.0dip"
+                android:listSelector="@drawable/list_item_selector"
+                android:numColumns="3"
+                android:smoothScrollbar="true"
+                android:verticalSpacing="1.0dip" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:background="@drawable/titlebar_shadow" />
+        </FrameLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="57dip"
+    android:minHeight="60dp"
+    android:background="@color/white"
+    android:padding="@dimen/padding">
+
+    <TextView
+        android:id="@+id/tv_charge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textColor="@color/charge_color"
+        android:textSize="@dimen/txt_size_charge"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="27.0dip"
+        android:layout_toRightOf="@+id/tv_charge"
+        android:textColor="@color/charge_score_color"
+        android:textSize="@dimen/txt_size_charge_score" />
+
+    <TextView
+        android:id="@+id/tv_send_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10.0dip"
+        android:layout_toRightOf="@+id/tv_score"
+        android:textColor="@color/charge_score_color"
+        android:textSize="@dimen/txt_size_charge_send_score" />
+
+    <CheckBox
+        android:id="@+id/cb_charge"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:button="@drawable/selector_top_up_checkbox"
+        android:checked="false"
+        android:paddingRight="@dimen/padding" />
+</RelativeLayout>

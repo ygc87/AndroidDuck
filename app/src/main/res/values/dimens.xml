@@ -1,0 +1,110 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="text_size_18">18.0dip</dimen>
+    <dimen name="text_size_16">16.0dip</dimen>
+    <dimen name="text_size_15">15.0dip</dimen>
+    <dimen name="text_size_14">14.0dip</dimen>
+    <dimen name="text_size_13">13.0dip</dimen>
+    <dimen name="space_8">8.0dip</dimen>
+
+    <!-- 意见反馈 -->
+
+    <!-- 时间选择dialog -->
+
+    <!--toast y offset  官方默认是64dip-->
+
+    <!--ghost-->
+
+    <!--注册页参数-->
+    <dimen name="design_navigation_max_width">280.0dip</dimen>
+    <dimen name="design_snackbar_action_inline_max_width">128.0dip</dimen>
+    <dimen name="design_snackbar_background_corner_radius">0.0dip</dimen>
+    <dimen name="design_snackbar_extra_spacing_horizontal">0.0dip</dimen>
+    <dimen name="design_snackbar_max_width">-1.0px</dimen>
+    <dimen name="design_snackbar_min_width">-1.0px</dimen>
+    <dimen name="design_snackbar_padding_vertical_2lines">24.0dip</dimen>
+    <dimen name="design_tab_scrollable_min_width">72.0dip</dimen>
+    <dimen name="activity_linearlayout_margin">10.0dip</dimen>
+    <dimen name="button_height">40.0dip</dimen>
+    <dimen name="button_radius">4.0dip</dimen>
+    <dimen name="design_appbar_elevation">4.0dip</dimen>
+    <dimen name="design_bottom_sheet_modal_elevation">16.0dip</dimen>
+    <dimen name="design_fab_border_width">0.5dip</dimen>
+    <dimen name="design_fab_elevation">6.0dip</dimen>
+    <dimen name="design_fab_image_size">24.0dip</dimen>
+    <dimen name="design_fab_size_mini">40.0dip</dimen>
+    <dimen name="design_fab_size_normal">56.0dip</dimen>
+    <dimen name="design_fab_translation_z_pressed">6.0dip</dimen>
+    <dimen name="design_navigation_elevation">16.0dip</dimen>
+    <dimen name="design_navigation_icon_padding">32.0dip</dimen>
+    <dimen name="design_navigation_icon_size">24.0dip</dimen>
+    <dimen name="design_navigation_padding_bottom">8.0dip</dimen>
+    <dimen name="design_navigation_separator_vertical_padding">8.0dip</dimen>
+    <dimen name="design_snackbar_elevation">6.0dip</dimen>
+    <dimen name="design_snackbar_padding_horizontal">12.0dip</dimen>
+    <dimen name="design_snackbar_padding_vertical">14.0dip</dimen>
+    <dimen name="design_snackbar_text_size">14.0sp</dimen>
+    <dimen name="design_tab_max_width">264.0dip</dimen>
+    <dimen name="design_tab_text_size">14.0sp</dimen>
+    <dimen name="design_tab_text_size_2line">12.0sp</dimen>
+    <dimen name="dimen_size_10">10.0dip</dimen>
+    <dimen name="dimen_size_14">14.0dip</dimen>
+    <dimen name="dimen_size_15">15.0dip</dimen>
+    <dimen name="dimen_size_16">16.0dip</dimen>
+    <dimen name="dimen_size_18">18.0dip</dimen>
+    <dimen name="dimen_size_2">2.0dip</dimen>
+    <dimen name="dimen_size_20">20.0dip</dimen>
+    <dimen name="dimen_size_30">30.0dip</dimen>
+    <dimen name="dimen_size_40">40.0dip</dimen>
+    <dimen name="dimen_size_5">5.0dip</dimen>
+    <dimen name="dimen_size_6">6.0dip</dimen>
+    <dimen name="head_home_mine">50.0dip</dimen>
+    <dimen name="img_small_ist">35.0dip</dimen>
+    <dimen name="item_touch_helper_max_drag_scroll_per_frame">20.0dip</dimen>
+    <dimen name="item_touch_helper_swipe_escape_max_velocity">800.0dip</dimen>
+    <dimen name="item_touch_helper_swipe_escape_velocity">120.0dip</dimen>
+    <dimen name="large_btn_height">40.0dip</dimen>
+    <dimen name="line_0.3">0.30000007dip</dimen>
+    <dimen name="line_0.5">0.5dip</dimen>
+    <dimen name="line_1">1.0dip</dimen>
+    <dimen name="padding">12.0dip</dimen>
+    <dimen name="padding_rule">4.0dip</dimen>
+    <dimen name="scan_head_height">50.0dip</dimen>
+    <dimen name="title_height">48.0dip</dimen>
+    <dimen name="title_leftandright_size">16.0sp</dimen>
+    <dimen name="title_margin_right">15.0dip</dimen>
+    <dimen name="txt_size_gift_activity_my_detail">14.0sp</dimen>
+    <dimen name="txt_size_gift_activity_my_score">50.0sp</dimen>
+    <dimen name="txt_size_gift_activity_my_score_list_score">35.0sp</dimen>
+    <dimen name="txt_size_gift_detail">15.0sp</dimen>
+    <dimen name="txt_size_gift_name">14.0sp</dimen>
+    <dimen name="txt_size_gift_score">18.0sp</dimen>
+    <dimen name="txt_size_charge">16.0sp</dimen>
+    <dimen name="txt_size_charge_score">14.0sp</dimen>
+    <dimen name="txt_size_charge_send_score">14.0sp</dimen>
+    <dimen name="txt_size_title">18.0sp</dimen>
+    <dimen name="txt_size_20">20.0sp</dimen>
+    <dimen name="user_group_mine">14.0dip</dimen>
+
+
+    <!-- lock screen -->
+
+    <dimen name="_5dp">5dp</dimen>
+    <dimen name="_10dp">10dp</dimen>
+    <dimen name="_15dp">15dp</dimen>
+    <dimen name="_20dp">20dp</dimen>
+    <dimen name="_30dp">30dp</dimen>
+    <dimen name="_40dp">40dp</dimen>
+    <dimen name="_50dp">50dp</dimen>
+    <dimen name="_150dp">150dp</dimen>
+    <dimen name="_270dp">270dp</dimen>
+
+    <dimen name="_16sp">16sp</dimen>
+    <dimen name="_14sp">14sp</dimen>
+
+    <dimen name="lay_20">20dp</dimen>
+
+    <!-- select Avastar-->
+
+</resources>

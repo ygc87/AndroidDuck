@@ -1,0 +1,11 @@
+<litepal>
+    <dbname value="xhy_test"></dbname>
+
+    <version value="3"></version>
+
+    <list>
+        <mapping class="com.xhy.neihanduanzi.model.bean.Account"></mapping>
+        <mapping class="com.xhy.neihanduanzi.model.bean.VideoRecord"></mapping>
+        <mapping class="com.xhy.neihanduanzi.model.bean.PictureRecord"></mapping>
+    </list>
+</litepal>

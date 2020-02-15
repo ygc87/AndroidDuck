@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/video_detail_bg"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.xhy.neihanduanzi.videoplayer.VideoPlayerView
+            android:id="@+id/video"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@color/white_translucent_20"
+            android:visibility="visible"
+            app:controller_layout_id="@layout/simple_exo_playback_list_view"
+            app:hide_on_touch="false"
+            app:player_layout_id="@layout/simple_exo_view"
+            app:player_list="true"
+            app:resize_mode="fill"
+            app:show_timeout="3000"
+            app:surface_type="texture_view" />
+
+        <RelativeLayout
+            android:id="@+id/operation_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/back_layout"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true">
+
+                <ImageView
+                    android:id="@+id/video_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/selector_video_detail_back" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/start_layout"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:id="@+id/video_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/btn_favorite_nor" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/layout_coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="46dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>

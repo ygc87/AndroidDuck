@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black_alpha_112">#70000000</color>
+    <color name="black_alpha_240">#f0000000</color>
+    <color name="black_alpha_48">#30000000</color>
+    <color name="black_alpha_80">#50000000</color>
+    <color name="grey_300">#e0e0e0</color>
+    <color name="trans">#00000000</color>
+    <dimen name="font_14">14sp</dimen>
+    <dimen name="font_15">15sp</dimen>
+    <dimen name="font_16">16sp</dimen>
+    <dimen name="font_18">18sp</dimen>
+    <dimen name="font_20">20sp</dimen>
+    <dimen name="lay_12">12dp</dimen>
+    <dimen name="lay_16">16dp</dimen>
+    <dimen name="lay_2">2dp</dimen>
+    <dimen name="lay_4">4dp</dimen>
+    <dimen name="lay_48">48dp</dimen>
+    <dimen name="lay_8">8dp</dimen>
+    <dimen name="size_116">116dp</dimen>
+    <dimen name="size_128">128dp</dimen>
+    <dimen name="size_16">16dp</dimen>
+    <dimen name="size_20">20dp</dimen>
+    <dimen name="size_28">28dp</dimen>
+    <dimen name="size_36">36dp</dimen>
+    <dimen name="size_64">64dp</dimen>
+</resources>

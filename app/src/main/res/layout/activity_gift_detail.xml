@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_ios"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/title_bar"></include>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/iv_detail"
+                            android:layout_width="160.0dip"
+                            android:layout_height="160.0dip"
+                            android:layout_margin="10.0dip"
+                            android:padding="@dimen/_10dp"
+                            android:src="@drawable/default_image_small" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_alignBottom="@id/iv_detail"
+                            android:layout_alignTop="@id/iv_detail"
+                            android:layout_toRightOf="@id/iv_detail"
+                            android:orientation="vertical"
+                            android:paddingLeft="20.0dip">
+
+                            <TextView
+                                android:id="@+id/tv_gift_detail_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20.0dip"
+                                android:textColor="@color/themeColor"
+                                android:textSize="20.0sp" />
+
+
+                            <TextView
+                                android:id="@+id/tv_gift_detail_get_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@+id/tv_gift_detail_name"
+                                android:layout_below="@+id/tv_gift_detail_brief"
+                                android:layout_marginTop="10.0dip"
+                                android:text="已有 人兑换"
+                                android:textColor="@color/bg_task_detail"
+                                android:textSize="@dimen/txt_size_gift_detail" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.30000007dip"
+                        android:background="@color/bg_listview_divider" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical"
+                        android:padding="@dimen/padding"
+                        android:paddingBottom="20.0dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/left_border_blue"
+                            android:paddingLeft="10.0dip"
+                            android:text="详情"
+                            android:textColor="@color/bg_gift_exchange_rule"
+                            android:textSize="@dimen/txt_size_gift_name" />
+
+                        <WebView
+                            android:id="@+id/wv_content"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10dp"
+                            android:text="礼物信息" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.30000007dip"
+                android:layout_gravity="bottom"
+                android:background="@color/bg_listview_divider" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:background="@drawable/titlebar_shadow" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:layout_above="@+id/rl_exchange"
+        android:background="@color/bg_listview_divider" />
+
+    <RelativeLayout
+        android:id="@+id/rl_exchange"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingBottom="8.0dip"
+        android:paddingLeft="@dimen/padding"
+        android:paddingRight="@dimen/padding"
+        android:paddingTop="8.0dip">
+
+        <ImageView
+            android:id="@+id/iv_integral"
+            android:layout_width="14.0sp"
+            android:layout_height="14.0sp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_point_light" />
+
+        <TextView
+            android:id="@+id/tv_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15.0dip"
+            android:layout_toRightOf="@id/iv_integral"
+            android:text="积分："
+            android:textColor="@color/bg_gift_score_txt"
+            android:textSize="@dimen/txt_size_gift_detail" />
+
+        <TextView
+            android:id="@+id/tv_dialog_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_txt"
+            android:textColor="@color/bg_gift_score"
+            android:textSize="@dimen/txt_size_gift_score" />
+
+        <TextView
+            android:id="@+id/tv_dialog_i_wanna_exchange"
+            android:layout_width="200.0dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bt_round_themcolor_selector"
+            android:gravity="center"
+            android:paddingBottom="10.0dip"
+            android:paddingLeft="14.0dip"
+            android:paddingRight="14.0dip"
+            android:paddingTop="10.0dip"
+            android:text="我要兑换"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size_gift_name" />
+    </RelativeLayout>
+</RelativeLayout>

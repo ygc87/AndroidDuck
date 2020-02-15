@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fl_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_ios"
+    android:orientation="vertical">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:srlEnableFooterFollowWhenLoadFinished="true"
+        app:srlEnableScrollContentWhenLoaded="true">
+
+        <com.scwang.smartrefresh.header.MaterialHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.xhy.neihanduanzi.view.AutoLoadRecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:scrollbars="vertical" />
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlClassicsSpinnerStyle="FixedBehind" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <ImageView
+        android:id="@+id/iv_refresh"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/refresh_bg"
+        android:src="@drawable/refresh" />
+
+    <com.xhy.neihanduanzi.view.TipView
+        android:id="@+id/tip_view"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:visibility="gone"
+        app:tipText="net_unavailable"
+        app:tipTextSize="14sp">
+    </com.xhy.neihanduanzi.view.TipView>
+
+</FrameLayout>

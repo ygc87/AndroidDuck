@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:background="#ffffff"
+    app:cardCornerRadius="2dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:id="@+id/item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/iv_user_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitXY"
+                android:src="@drawable/widget_default_face" />
+
+            <TextView
+                android:id="@+id/tv_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/iv_user_icon"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8.5dp"
+                android:layout_toRightOf="@id/iv_user_icon"
+                android:singleLine="true"
+                android:text="作者" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_user_icon"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/video_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.xhy.neihanduanzi.videoplayer.VideoPlayerView
+                android:id="@+id/videoplayer"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:visibility="gone"
+                app:controller_layout_id="@layout/simple_exo_playback_list_view"
+                app:hide_on_touch="false"
+                app:player_layout_id="@layout/simple_exo_view"
+                app:player_list="true"
+                app:resize_mode="fill"
+                app:show_timeout="3000"
+                app:surface_type="texture_view" />
+
+            <!--<ImageView
+                android:id="@+id/ad_item"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:background="#DFDFDF"/>-->
+
+            <com.xhy.neihanduanzi.view.ResizableImageView
+                android:id="@+id/ad_item"
+                android:layout_width="match_parent"
+                android:layout_height="260dp" />
+        </FrameLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp">
+
+            <TextView
+                android:id="@+id/tv_ad_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical|left"
+                android:text=""
+                android:textColor="#FF00FF"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

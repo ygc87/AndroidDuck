@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.chaokun.neihanduanzi">
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="com.android.launcher3.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.android.launcher3.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <!-- 必选 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- Required  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <meta-data
+        android:name="com.bumptech.glide.integration.okhttp.OkHttpGlideModule"
+        android:value="GlideModule" />
+
+    <!-- 需要申明的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application
+        android:name="com.xhy.neihanduanzi.XHYApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/neihan"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 您从百度网站获取的APP KEY -->
+        <meta-data
+            android:name="BaiduMobAd_STAT_ID"
+            android:value="1db500a881" /> <!-- abcd1234 -->
+        <!-- 渠道商编号 -->
+        <meta-data
+            android:name="BaiduMobAd_CHANNEL"
+            android:value="Baidu Market" />
+
+        <!-- 是否开启错误日志统计，默认为false -->
+        <meta-data
+            android:name="BaiduMobAd_EXCEPTION_LOG"
+            android:value="true" />
+        <!-- 日志发送策略，可选值：APP_START、ONCE_A_DAY、SET_TIME_INTERVAL，默认为APP_START -->
+        <meta-data
+            android:name="BaiduMobAd_SEND_STRATEGY"
+            android:value="APP_START" />
+        <!-- 日志发送策略 为SET_TIME_INTERVAL时，需设定时间间隔(取消下行注释)。取值为1-24的整数，默认为1 -->
+        <!-- <meta-data android:name="BaiduMobAd_TIME_INTERVAL" android:value="2" /> -->
+        <!-- 日志仅在wifi网络下发送，默认为false -->
+        <meta-data
+            android:name="BaiduMobAd_ONLY_WIFI"
+            android:value="false" />
+        <!-- 是否获取基站位置信息 ,默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_CELL_LOCATION"
+            android:value="true" />
+        <!-- 是否获取GPS位置信息，默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_GPS_LOCATION"
+            android:value="true" />
+        <!-- 是否获取WIFI位置信息，默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_WIFI_LOCATION"
+            android:value="true" />
+
+        <!--<activity
+            android:name="com.xhy.neihanduanzi.LaunchActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>-->
+
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.AdActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.DisplayFreeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.LoginActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="登录中心"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.DetailVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.RegisterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 重置密码页 -->
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.ResetPwdActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 忘记密码 -->
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.ForgetPwdActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 重置密码页 -->
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.userinfo.ChangePasswdActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 积分详情页 -->
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.socres.ScoreActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 积分规则页 -->
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.socres.ScoreRuleActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 积分商城页 -->
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.socres.ScoreShopActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 积分获取详情页 -->
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.socres.ScoreDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 充值页 -->
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.socres.ChongzhiActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 礼物详情页 -->
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.socres.GiftDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 收藏页 -->
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.userinfo.CollectedActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 扫描二维码 -->
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.ScanActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 绑定手机页 -->
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.userinfo.BindPhoneActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 意见反馈 -->
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.userinfo.FeedBackActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 图片选择页 -->
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.SelectImageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="选择图片"
+            android:screenOrientation="portrait" /> <!-- android:theme="@style/Base.App.Theme.NoTitle" -->
+        <!-- 图片剪裁页 -->
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.CropActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="图片裁剪"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Dialog.NoTitle.Translucent" />
+        <!-- 已购视频和图片页 -->
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.userinfo.PurchaseActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!-- 图片展示页 -->
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.ImageGalleryActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label=""
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!-- 购买页 -->
+        <activity
+            android:name="com.xhy.neihanduanzi.media.LargeImageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label=""
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.xhy.neihanduanzi.update.UpdateActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="在线更新"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Dialog.NoTitle.Translucent" />
+
+        <activity
+            android:name="com.xhy.neihanduanzi.activity.WebViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.xhy.neihanduanzi.lockdemo.activity.CreateGestureActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label=""
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.xhy.neihanduanzi.lockdemo.activity.GestureLoginActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label=""
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.xhy.neihanduanzi.lockdemo.activity.OpenLockScreenActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label=""
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.xhy.neihanduanzi.update.DownloadService"
+            android:exported="false" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.xhy.neihanduanzi.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

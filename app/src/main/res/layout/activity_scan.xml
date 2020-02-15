@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_ios"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"></include>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/recbackground_white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="10.0dip"
+                android:paddingLeft="15.0dip"
+                android:paddingRight="10.0dip"
+                android:paddingTop="10.0dip">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.xhy.neihanduanzi.widget.PortraitView
+                        android:id="@+id/usertouxiang"
+                        android:layout_width="@dimen/scan_head_height"
+                        android:layout_height="@dimen/scan_head_height"
+                        android:src="@drawable/default_image_small" />
+
+                    <ImageView
+                        android:layout_width="@dimen/user_group_mine"
+                        android:layout_height="@dimen/user_group_mine"
+                        android:layout_gravity="bottom|center|right" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:orientation="vertical"
+                    android:paddingRight="10.0dip">
+
+                    <TextView
+                        android:id="@+id/tv_scan_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="UserName"
+                        android:textColor="@color/black"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/tv_user_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3.0dip"
+                        android:ellipsize="end"
+                        android:hint="@string/empty_user_intro"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/bar"
+                        android:textSize="12.0sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.100000024dip"
+                android:background="#ffcccccc" />
+
+            <ImageView
+                android:id="@+id/erweima"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20.0dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@drawable/titlebar_shadow" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10.0dip"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/_10dp"
+        android:text="推荐好友，下载小黄鸭，绑定手机即可获得50积分，别忘了让好友填写推荐人ID。"
+        android:textColor="@color/bar"
+        android:textSize="14.0sp" />
+
+</LinearLayout>
